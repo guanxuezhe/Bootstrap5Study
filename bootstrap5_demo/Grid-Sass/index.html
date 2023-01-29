@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap 断点（Breakpoints）-->
+    <link href="scss/custom.css" rel="stylesheet" />
+    <script type="text/javascript">
+      function showSize() {
+        console.log("width:", document.body.offsetWidth);
+        document.getElementById("content").innerHTML =
+          document.body.offsetWidth;
+      }
+    </script>
+    <style>
+      .bgColor {
+        background-color: rgba(0, 0, 255, 0.178);
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor2 {
+        background-color: yellow;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor3 {
+        background-color: orange;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor4 {
+        background-color: #66ff99;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor5 {
+        background-color: pink;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor6 {
+        background-color: #ccff66;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .smallFont {
+        font-size: small;
+      }
+    </style>
+    <title>网格（Grid） Sass</title>
+  </head>
+  <body onresize="showSize()" onload="showSize()">
+    <div>
+      <div>当前宽度:<span id="content"></span></div>
+    </div>
+    <div class="bgColor2">Sass mixin</div>
+    <div class="bgColor5">default:row-cols(3)</div>
+    <div class="bgColor5">宽度>=md(768px) row-cols(5)</div>
+    <div class="container">
+      <div class="row custom-class">
+        <div class="col bgColor3">Column1</div>
+        <div class="col bgColor3">Column2</div>
+        <div class="col bgColor3">Column3</div>
+        <div class="col bgColor3">Column4</div>
+        <div class="col bgColor3">Column5</div>
+        <div class="col bgColor3">Column6</div>
+        <div class="col bgColor3">Column7</div>
+        <div class="col bgColor3">Column8</div>
+      </div>
+    </div>
+    <hr />
+    <div class="bgColor2">
+      Mixins与网格变量一起使用，为单个网格列生成语义CSS。
+    </div>
+    <div class="example-container">
+      <div class="example-row">
+        <div class="example-content-main bgColor3">Main content</div>
+        <div class="example-content-secondary bgColor4">Secondary content</div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap 网格（Grid）-->
+    <script type="text/javascript">
+      function showSize() {
+        console.log("width:", document.body.offsetWidth);
+        document.getElementById("content").innerHTML =
+          document.body.offsetWidth;
+      }
+    </script>
+    <style>
+      .fontSize {
+        font-size: 18px;
+        background-color: orange;
+      }
+      .bgColor {
+        background-color: rgba(0, 0, 255, 0.178);
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor2 {
+        background-color: yellow;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor3 {
+        background-color: orange;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor4 {
+        background-color: #66ff99;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor5 {
+        background-color: pink;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor6 {
+        background-color: #ccff66;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .smallFont {
+        font-size: small;
+      }
+      .bd-example-row-flex-cols .row {
+        min-height: 5rem;
+        background-color: rgba(255, 0, 0, 0.1);
+        margin: 1rem -0.75rem 0;
+      }
+      .bd-example-row-flex-cols2 .row {
+        min-height: 1rem;
+        background-color: rgba(255, 0, 0, 0.1);
+        margin: 1rem -0.75rem 0;
+      }
+    </style>
+    <title>列布局（Columns）</title>
+  </head>
+  <body>
+    <h1 class="fontSize">垂直对齐(Vertical alignment)</h1>
+    <div class="bd-example-row-flex-cols">
+      <div class="col bgColor2">align-items</div>
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col bgColor5">
+            row align-items-start 行的对齐方式 顶对齐 columns1
+          </div>
+          <div class="col bgColor5">
+            row align-items-start 行的对齐方式 顶对齐 columns2
+          </div>
+          <div class="col bgColor5">
+            row align-items-start 行的对齐方式 顶对齐 columns3
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col bgColor5">
+            row align-items-center 行的对齐方式 中间对齐 columns4
+          </div>
+          <div class="col bgColor5">
+            row align-items-center 行的对齐方式 中间对齐 columns5
+          </div>
+          <div class="col bgColor5">
+            row align-items-center 行的对齐方式 中间对齐 columns6
+          </div>
+        </div>
+        <div class="row align-items-end">
+          <div class="col bgColor5">
+            row align-items-end 行的对齐方式 底对齐 columns7
+          </div>
+          <div class="col bgColor5">
+            row align-items-end 行的对齐方式 底对齐 columns8
+          </div>
+          <div class="col bgColor5">
+            row align-items-end 行的对齐方式 底对齐 columns9
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="bd-example-row-flex-cols">
+      <div class="col bgColor2">align-self 列的单独对齐方式</div>
+      <div class="container">
+        <div class="row">
+          <div class="col align-self-start bgColor5">
+            row col align-self-start 顶对齐 columns1
+          </div>
+          <div class="col align-self-center bgColor5">
+            row col align-self-center 中间对齐 columns2
+          </div>
+          <div class="col align-self-end bgColor5">
+            row col align-self-end 底对齐 columns3
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 class="fontSize">水平对齐(Horizontal alignment)</h1>
+    <div class="bd-example-row-flex-cols2">
+      <div class="container">
+        <div class="row justify-content-start">
+          <div class="col-4 bgColor2">
+            row justify-content-start 左对齐 columns1
+          </div>
+          <div class="col-4 bgColor2">
+            row justify-content-start 左对齐 columns2
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-4 bgColor2">
+            row justify-content-center 居中对齐 columns1
+          </div>
+          <div class="col-4 bgColor2">
+            row justify-content-center 居中对齐 columns2
+          </div>
+        </div>
+        <div class="row justify-content-end">
+          <div class="col-4 bgColor2">
+            row justify-content-end 右对齐 columns1
+          </div>
+          <div class="col-4 bgColor2">
+            row justify-content-end 右对齐 columns2
+          </div>
+        </div>
+        <div class="row justify-content-around">
+          <div class="col-4 bgColor2">
+            row justify-content-around 分散居中对齐（每个元素两侧的间距是相等的
+            columns1
+          </div>
+          <div class="col-4 bgColor2">
+            row justify-content-around 分散居中对齐（每个元素两侧的间距是相等的
+            columns2
+          </div>
+        </div>
+        <div class="row justify-content-between">
+          <div class="col-4 bgColor2">
+            row justify-content-between
+            左右两端对齐（元素之间的间距是自动平分的） columns1
+          </div>
+          <div class="col-4 bgColor2">
+            row justify-content-between
+            左右两端对齐（元素之间的间距是自动平分的） columns2
+          </div>
+        </div>
+        <div class="row justify-content-evenly">
+          <div class="col-4 bgColor2">
+            row justify-content-evenly
+            平均对齐（各个元素之间的间距是自动平分的） columns1
+          </div>
+          <div class="col-4 bgColor2">
+            row justify-content-evenly
+            平均对齐（各个元素之间的间距是自动平分的） columns2
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 class="fontSize">
+      列换行(Column wrapping)如果单行中放置了超过 12
+      列，则超出的列所在组将作为一个单元整体换行。
+    </h1>
+    <div class="bd-example-row-flex-cols2">
+      <div class="container">
+        <div class="row">
+          <div class="col-9 bgColor2">.col-9</div>
+          <div class="col-4 bgColor2">
+            .col-4 由于 9 + 4 = 13 > 12 ，这个 4 列宽的 div
+            将作为一个整体单元换行。
+          </div>
+          <div class="col-6 bgColor2">.col-6 后续列沿新行继续。</div>
+        </div>
+      </div>
+    </div>
+    <h1 class="fontSize">
+      列拆分(Column breaks)
+      在flexbox中将列拆分为新行需要一个小技巧：添加一个宽度为100%的元素，无论您想在哪里将列换到新行。通常这是通过多个.row来完成的，但不是每个实现方法都能解释这一点。
+    </h1>
+    <div class="bd-example-row-flex-cols2">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-sm-3 bgColor2">.col-6 .col-sm-3</div>
+          <div class="col-6 col-sm-3 bgColor2">.col-6 .col-sm-3</div>
+
+          <!-- Force next columns to break to new line -->
+          <div class="w-100 bgColor2"></div>
+
+          <div class="col-6 col-sm-3 bgColor2">.col-6 .col-sm-3</div>
+          <div class="col-6 col-sm-3 bgColor2">.col-6 .col-sm-3</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-sm-4 bgColor2">.col-6 .col-sm-4</div>
+          <div class="col-6 col-sm-4 bgColor2">.col-6 .col-sm-4</div>
+
+          <!-- Force next columns to break to new line at md breakpoint and up -->
+          <div class="w-100 d-none d-md-block bgColor2"></div>
+
+          <div class="col-6 col-sm-4 bgColor2">.col-6 .col-sm-4</div>
+          <div class="col-6 col-sm-4 bgColor2">.col-6 .col-sm-4</div>
+        </div>
+      </div>
+    </div>
+    <h1 class="fontSize">排序类(Reordering) 使用 .order- 类来控制内容的视觉顺序。 这些类是响应式的，因此您可以通过断点设置 order（例如，.order-1.order-md-2）。 包括对所有六个网格层的 1 到 5 的支持。</h1>
+    <div class="bd-example-row-flex-cols2">
+      <div class="container">
+        <div class="row">
+          <div class="col bgColor2">
+            第一个 DOM 元素，没有应用排序
+          </div>
+          <div class="col order-5 bgColor2">
+            第二个 DOM 元素，排在第 5 位
+          </div>
+          <div class="col order-1 bgColor2">
+            第三个 DOM 元素，排在第 1 位
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col order-last bgColor2">
+            第一个 DOM 元素， 排在末尾
+          </div>
+          <div class="col bgColor2">
+            第二个 DOM 元素， 没有排序
+          </div>
+          <div class="col order-first bgColor2">
+            第三个 DOM 元素， 排在开头
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <h1 class="fontSize">排列偏移(Offsetting columns) 您可以通过两种方式偏移网格列：我们的响应式.offset-类和margin实用程序。网格类的大小与列匹配，而边距对于偏移宽度可变的快速布局更有用。</h1>
+    <div class="bd-example-row-flex-cols2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 bgColor2">.col-md-4</div>
+          <div class="col-md-4 offset-md-4 bgColor2">.col-md-4 .offset-md-4</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 offset-md-3 bgColor2">.col-md-3 .offset-md-3</div>
+          <div class="col-md-3 offset-md-3 bgColor2">.col-md-3 .offset-md-3</div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 offset-md-3 bgColor2">.col-md-6 .offset-md-3</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5 col-md-6 bgColor2">.col-sm-5 .col-md-6</div>
+          <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0 bgColor2">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-md-5 col-lg-6 bgColor2">.col-sm-6 .col-md-5 .col-lg-6</div>
+          <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0 bgColor2">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>
+        </div>
+      </div>
+    </div>
+    <h1 class="fontSize">外边距实用类(Margin utilities) 通过在v4中迁移到flexbox，您可以使用诸如.me auto之类的边距实用程序强制同级列彼此分离。</h1>
+    <div class="bd-example-row-flex-cols2">
+      <div class="container">
+        <div class="row">
+        <div class="col-md-4 bgColor2">.col-md-4</div>
+        <div class="col-md-4 ms-auto bgColor2">.col-md-4 .ms-auto</div>
+        </div>
+        <div class="row">
+        <div class="col-md-3 ms-md-auto bgColor2">.col-md-3 .ms-md-auto</div>
+        <div class="col-md-3 ms-md-auto bgColor2">.col-md-3 .ms-md-auto</div>
+        </div>
+        <div class="row">
+        <div class="col-auto me-auto bgColor2">.col-auto .me-auto</div>
+        <div class="col-auto bgColor2">.col-auto</div>
+        </div>
+        </div>
+    </div>
+    <h1 class="fontSize">独立列类(Standalone column classes) .col-*类也可以在 .row外部使用，为元素提供特定的宽度。当列类用作行的非直接子级时，将忽略填充。</h1>
+    <div class="bd-example-row-flex-cols2">
+      <div class="col-3 bg-light p-3 border bgColor2">
+        .col-3: width of 25%
+        </div>
+        <div class="col-sm-9 bg-light p-3 border bgColor2">
+        .col-sm-9: width of 75% above sm breakpoint
+        </div>
+    </div>
+    <h1 class="fontSize">这些类可以与实用程序一起使用来创建响应的浮动图像。如果文本较短，请确保将内容包装在.clearfix包装器中以清除浮动。</h1>
+    <div class="bd-example-row-flex-cols2">
+      <div class="clearfix">
+        <img src="./grid_col.JPG" class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+        <p>
+        A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
+        </p>
+        <p>
+        As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with some actual content in here, rather than just this boring placeholder text that goes on and on, but actually conveys no tangible information at. It simply takes up space and should not really be read.
+        </p>
+        <p>
+        And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
+        </p>
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

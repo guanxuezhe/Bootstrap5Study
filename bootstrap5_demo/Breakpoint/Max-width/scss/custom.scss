@@ -1,0 +1,44 @@
+@import "bootstrap-5.2.3/scss/bootstrap";
+
+.custom-class {
+  background: white;
+}
+
+/* change col style Max-width
+红色 #FF0000 
+橙色 #FF7F00
+黄色 #FFFF00 
+绿色 #00FF00 
+青色 #00FFFF 
+蓝色 #0000FF
+紫色 #8B00FF 
+*/
+@include media-breakpoint-down(xxl) {
+  .custom-class {
+    background: #00ffff;
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .custom-class {
+    background: #00ff00;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .custom-class {
+    background: #ffff00;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .custom-class {
+    background: #ff7f00;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .custom-class {
+    background: #ff0000;
+  }
+}

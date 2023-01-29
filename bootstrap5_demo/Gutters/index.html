@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap 沟槽（Gutters）-->
+    <script type="text/javascript">
+      function showSize() {
+        console.log("width:", document.body.offsetWidth);
+        document.getElementById("content").innerHTML =
+          document.body.offsetWidth;
+      }
+    </script>
+    <style>
+      .fontSize {
+        font-size: 18px;
+        background-color: orange;
+      }
+      .bgColor {
+        background-color: rgba(0, 0, 255, 0.178);
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor2 {
+        background-color: yellow;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor3 {
+        background-color: orange;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor4 {
+        background-color: #66ff99;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor5 {
+        background-color: pink;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor6 {
+        background-color: #ccff66;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .smallFont {
+        font-size: small;
+      }
+      .bd-example-row-flex-cols .row {
+        min-height: 5rem;
+        background-color: rgba(255, 0, 0, 0.1);
+        margin: 1rem -0.75rem 0;
+      }
+      .bd-example-row-flex-cols2 .row {
+        min-height: 1rem;
+        background-color: rgba(255, 0, 0, 0.1);
+        margin: 1rem -0.75rem 0;
+      }
+    </style>
+    <title>沟槽（Gutters）</title>
+  </head>
+  <body>
+    <h1 class="fontSize">
+      沟槽（Gutters）:Bootstrap
+      网格系统的沟槽是列之间的内边距，用于调整响应式空间和对齐 Bootstrap
+      网格系统中的内容
+    </h1>
+    <div>
+      <div class="col bgColor2">
+        水平沟槽 Horizontal gutters .gx-* 类可用于控制水平间距宽度(例 gx-4)
+      </div>
+      <div class="container px-4">
+        <div class="row gx-5">
+          <div class="col">
+            <div class="p-3 border bg-light">Custom column padding</div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-light">Custom column padding</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col bgColor2">
+      另一种解决方案是在 .row 周围添加一个包装元素，并使用 .overflow-hidden 类
+    </div>
+    <div class="container overflow-hidden">
+      <div class="row gx-5">
+        <div class="col">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="col bgColor2">
+      垂直沟槽 .gy-* 类可用于控制垂直间距宽度。(例
+      gy-5)与水平沟槽一样，垂直沟槽可能会导致页面末尾的 .row 下方出现一些溢出。
+      如果发生这种情况，请在 .row
+      周围添加一个包装元素，并使用.overflow-hidden类：
+    </div>
+    <div class="container overflow-hidden">
+      <div class="row gy-5">
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="col bgColor2">
+      所有(水平和垂直)沟槽 .g-*
+      类可用于控制沟槽间距宽度，对于以下示例，我们使用较小的沟槽宽度，因此无需添加
+      .overflow-hidden 包装类。
+    </div>
+    <div class="container">
+      <div class="row g-2">
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="col bgColor2">行列沟槽(例 g-2)</div>
+    <div class="container">
+      <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <div class="col">
+          <div class="p-3 border bg-light">Row column</div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">Row column</div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">Row column</div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">Row column</div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">Row column</div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">Row column</div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">Row column</div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">Row column</div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">Row column</div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">Row column</div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="col bgColor2">
+      无沟槽 可以使用 .g-0 删除我们预定义的网格类中列之间的间距。 这将删除 .row
+      中的负 margin 和所有直接子列中的水平 padding。
+    </div>
+    <div class="row g-0">
+      <div class="col-sm-6 col-md-8 bgColor6">.col-sm-6 .col-md-8</div>
+      <div class="col-6 col-md-4 bgColor6">.col-6 .col-md-4</div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
