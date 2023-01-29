@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap 图形(Figures)-->
+    <script type="text/javascript">
+      function showSize() {
+        console.log("width:", document.body.offsetWidth);
+        document.getElementById("content").innerHTML =
+          document.body.offsetWidth;
+      }
+    </script>
+    <style>
+      .fontSize {
+        font-size: 18px;
+        background-color: orange;
+      }
+      .bgColor {
+        background-color: rgba(0, 0, 255, 0.178);
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor2 {
+        background-color: yellow;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor3 {
+        background-color: orange;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor4 {
+        background-color: #66ff99;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor5 {
+        background-color: pink;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor6 {
+        background-color: #ccff66;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .smallFont {
+        font-size: small;
+      }
+      .bd-example-row-flex-cols .row {
+        min-height: 5rem;
+        background-color: rgba(255, 0, 0, 0.1);
+        margin: 1rem -0.75rem 0;
+      }
+      .bd-example-row-flex-cols2 .row {
+        min-height: 1rem;
+        background-color: rgba(255, 0, 0, 0.1);
+        margin: 1rem -0.75rem 0;
+      }
+    </style>
+    <title>图形(Figures)</title>
+  </head>
+  <body>
+    <h1 class="fontSize">
+      图形(Figures):在 Bootstrap 中使用图形组件显示相关图片和文本的文档和示例。
+      您需要显示一段内容的时候——比如带有可选标题的图片时，请考虑使用
+      &lt;figure&gt; 使用 .figure、.figure-img 和 .figure-caption 类为 HTML5
+      &lt;figure&gt; 和 &lt;figcaption&gt; 元素提供一些基本样式。
+      图中的图片没有明确的大小，因此请务必将 .img-fluid 类添加到您的 &lt;img
+      /&gt; 元素，以使其具有响应性。
+    </h1>
+    <div>
+      <div class="row">
+        <div>
+          <p class="col bgColor2">对齐图片:rounded mx-auto d-block</p>
+          <div>
+            <figure class="figure">
+              <img
+                src="./c.jpeg"
+                class="figure-img img-fluid rounded"
+                alt="..."
+              />
+              <figcaption class="figure-caption">
+                A caption for the above image.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <p class="col bgColor2">
+            使用我们的文本实用程序，对齐图形的标题很容易。
+          </p>
+          <div>
+            <figure class="figure">
+              <img
+                src="./c.jpeg"
+                class="figure-img img-fluid rounded"
+                alt="..."
+              />
+              <figcaption class="figure-caption text-end">
+                A caption for the above image.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

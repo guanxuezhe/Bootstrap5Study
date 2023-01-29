@@ -1,0 +1,26 @@
+@import "bootstrap-5.2.3/scss/bootstrap";
+
+.custom-class {
+  background: white;
+}
+
+/* change col style BetweenBreakpoints
+红色 #FF0000 
+橙色 #FF7F00
+黄色 #FFFF00 
+绿色 #00FF00 
+青色 #00FFFF 
+蓝色 #0000FF
+紫色 #8B00FF 
+*/
+@include media-breakpoint-between(sm, md) {
+  .custom-class {
+    background: #ff0000;
+  }
+}
+
+@include media-breakpoint-between(xl, xxl) {
+  .custom-class {
+    background: #ff7f00;
+  }
+}

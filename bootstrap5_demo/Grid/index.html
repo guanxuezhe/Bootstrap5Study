@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap 网格（Grid）-->
+    <script type="text/javascript">
+      function showSize() {
+        console.log("width:", document.body.offsetWidth);
+        document.getElementById("content").innerHTML =
+          document.body.offsetWidth;
+      }
+    </script>
+    <style>
+      .bgColor {
+        background-color: rgba(0, 0, 255, 0.178);
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor2 {
+        background-color: yellow;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor3 {
+        background-color: orange;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor4 {
+        background-color: #66ff99;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor5 {
+        background-color: pink;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .bgColor6 {
+        background-color: #ccff66;
+        border: 1px solid rgba(86, 61, 124, 0.2);
+      }
+      .smallFont {
+        font-size: small;
+      }
+    </style>
+    <title>网格（Grid）</title>
+  </head>
+  <body onresize="showSize()" onload="showSize()">
+    <div>
+      <img src="./grid_col.JPG" class="img-fluid" alt="..." />
+    </div>
+    <div class="bgColor2">当前宽度:<span id="content"></span></div>
+    <div class="bgColor2">自动布局列　等宽(Equal-width)</div>
+    <div class="container">
+      <div class="row">
+        <div class="col bgColor">1 of 2</div>
+        <div class="col bgColor">2 of 2</div>
+      </div>
+      <div class="row">
+        <div class="col bgColor">1 of 3</div>
+        <div class="col bgColor">2 of 3</div>
+        <div class="col bgColor">3 of 3</div>
+      </div>
+    </div>
+    <hr />
+    <div class="bgColor2">设置一个列宽(Setting one column width)</div>
+    <div class="container">
+      <div class="row">
+        <div class="col bgColor">1 of 3</div>
+        <div class="col-6 bgColor">2 of 3 (wider) col-6</div>
+        <div class="col bgColor">3 of 3</div>
+      </div>
+      <div class="row">
+        <div class="col bgColor">1 of 3</div>
+        <div class="col-5 bgColor">2 of 3 (wider) col-5</div>
+        <div class="col bgColor">3 of 3</div>
+      </div>
+    </div>
+    <hr />
+    <div class="bgColor2">可变宽度内容(Variable width content )</div>
+    <div class="container">
+      <div class="row">
+        <div class="col col-lg-2 bgColor">1 of 3 col-lg-2</div>
+        <div class="col-md-auto bgColor">
+          2 of 3 col-md-auto Variable width content
+        </div>
+        <div class="col col-lg-2 bgColor">3 of 3 col-lg-2</div>
+      </div>
+      <div class="row">
+        <div class="col bgColor">1 of 3 col</div>
+        <div class="col-md-auto bgColor">
+          2 of 3 col-md-auto Variable width content
+        </div>
+        <div class="col col-lg-2 bgColor">3 of 3 col-lg-2</div>
+      </div>
+    </div>
+    <hr />
+    <div class="bgColor2">所有断点(All breakpoints)</div>
+    <div class="container">
+      <div class="row">
+        <div class="col bgColor">col均等分割 不会折行(堆叠)</div>
+        <div class="col bgColor">col均等分割 不会折行(堆叠)</div>
+        <div class="col bgColor">col均等分割 不会折行(堆叠)</div>
+        <div class="col bgColor">col均等分割 不会折行(堆叠)</div>
+      </div>
+      <div class="row">
+        <div class="col-8 bgColor">col-8 占8/12 不会折行(堆叠)</div>
+        <div class="col-4 bgColor">col-4 占4/12 不会折行(堆叠)</div>
+      </div>
+    </div>
+    <hr />
+    <div class="bgColor2">水平堆叠(Stacked to horizontal)</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 bgColor">
+          col-sm-8 占8/12 当小于sm(576px) 折行(堆叠)
+        </div>
+        <div class="col-sm-4 bgColor">
+          col-sm-4 占8/12 当小于sm(576px) 折行(堆叠)
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm bgColor">
+          col-sm 均等分割 当小于sm(576px) 折行(堆叠)
+        </div>
+        <div class="col-sm bgColor">
+          col-sm 均等分割 当小于sm(576px) 折行(堆叠)
+        </div>
+        <div class="col-sm bgColor">
+          col-sm 均等分割 当小于sm(576px) 折行(堆叠)
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="bgColor2">混合和匹配(Mix and match)</div>
+    <div class="container">
+      <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+      <div>
+        Stack the columns on mobile by making one full-width and the other
+        half-width
+      </div>
+      <div>
+        上边的col-md-8当屏幕小于md(768px)的情况下，没有col相关的css分割
+        div为行标签，所以折行
+      </div>
+      <div class="row">
+        <div class="col-md-8 bgColor3">.col-md-8(md 768px)</div>
+        <div class="col-6 col-md-4 bgColor3">.col-6 .col-md-4(md 768px)</div>
+      </div>
+      <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+      <div>列在移动设备上的宽度50%，在桌面设备上增加到 33.3%</div>
+      <div class="row">
+        <div class="col-6 col-md-4 bgColor4">.col-6 .col-md-4(md 768px)</div>
+        <div class="col-6 col-md-4 bgColor4">.col-6 .col-md-4(md 768px)</div>
+        <div class="col-6 col-md-4 bgColor4">.col-6 .col-md-4(md 768px)</div>
+      </div>
+
+      <!-- Columns are always 50% wide, on mobile and desktop -->
+      <div>Columns are always 50% wide, on mobile and desktop</div>
+      <div class="row">
+        <div class="col-6 bgColor5">.col-6</div>
+        <div class="col-6 bgColor5">.col-6</div>
+      </div>
+    </div>
+    <hr />
+    <div class="bgColor2">行和列(Columns)</div>
+    <div class="bgColor6">row-cols-2</div>
+    <div class="container">
+      <div class="row row-cols-2">
+        <div class="col bgColor3">Column1</div>
+        <div class="col bgColor3">Column2</div>
+        <div class="col bgColor3">Column3</div>
+        <div class="col bgColor3">Column4</div>
+      </div>
+    </div>
+    <div class="bgColor6">row-cols-3</div>
+    <div class="container">
+      <div class="row row-cols-3">
+        <div class="col bgColor3">Column1</div>
+        <div class="col bgColor3">Column2</div>
+        <div class="col bgColor3">Column3</div>
+        <div class="col bgColor3">Column4</div>
+      </div>
+    </div>
+    <div class="bgColor6">row-cols-auto</div>
+    <div class="container">
+      <div class="row row-cols-auto">
+        <div class="col bgColor3">Column1</div>
+        <div class="col bgColor3">Column2</div>
+        <div class="col bgColor3">Column3</div>
+        <div class="col bgColor3">Column4</div>
+      </div>
+    </div>
+    <div class="bgColor6">row-cols-4</div>
+    <div class="container">
+      <div class="row row-cols-4">
+        <div class="col bgColor3">Column1</div>
+        <div class="col bgColor3">Column2</div>
+        <div class="col bgColor3">Column3</div>
+        <div class="col bgColor3">Column4</div>
+      </div>
+    </div>
+    <div class="bgColor6">row-cols-4 col-6</div>
+    <div class="container">
+      <div class="row row-cols-4">
+        <div class="col bgColor3">col Column1</div>
+        <div class="col bgColor3">col Column2</div>
+        <div class="col-6 bgColor3">col-6 Column3</div>
+        <div class="col bgColor3">col Column4</div>
+      </div>
+    </div>
+    <div class="bgColor6">row-cols-1 row-cols-sm-2 row-cols-md-4</div>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        <div class="col bgColor3">Column1</div>
+        <div class="col bgColor3">Column2</div>
+        <div class="col bgColor3">Column3</div>
+        <div class="col bgColor3">Column4</div>
+      </div>
+    </div>
+    <div class="bgColor6">row-cols-2 row-cols-lg-3</div>
+    <div class="container">
+      <div class="row row-cols-2 row-cols-lg-3">
+        <div class="col bgColor3">Column1</div>
+        <div class="col bgColor3">Column2</div>
+        <div class="col bgColor3">Column3</div>
+        <div class="col bgColor3">Column4</div>
+        <div class="col bgColor3">Column5</div>
+        <div class="col bgColor3">Column6</div>
+        <div class="col-4 col-lg-2 bgColor3">Column7</div>
+        <div class="col-4 col-lg-2 bgColor3">Column8</div>
+        <div class="col-4 col-lg-2 bgColor3">Column9</div>
+        <div class="col-4 col-lg-2 bgColor3">Column10</div>
+        <div class="col-4 col-lg-2 bgColor3">Column11</div>
+        <div class="col-4 col-lg-2 bgColor3">Column12</div>
+      </div>
+    </div>
+    <hr />
+    <div class="bgColor2">嵌套(Nesting)</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 bgColor3">Level 1: .col-sm-3</div>
+        <div class="col-sm-9 bgColor3">
+          <div class="row">
+            <div class="col-8 col-sm-6 bgColor3">Level 2: .col-8 .col-sm-6</div>
+            <div class="col-4 col-sm-6 bgColor3">Level 2: .col-4 .col-sm-6</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
